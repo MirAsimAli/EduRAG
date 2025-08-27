@@ -26,13 +26,19 @@ Total: **10 NCERT Class 10 Books** embedded.
 ## ⚙️ Workflow
 
 ```mermaid
-graph TD;
-    A[PDF Books] -->|Tokenization + Metadata| B[Text Chunks]
-    B -->|Embeddings (MiniLM)| C[ChromaDB]
-    C -->|Retriever| D[RAG Pipeline]
-    D -->|Query + Context| E[Groq LLaMA3-8B]
-    E -->|Answer| F[User]
-```
+sequenceDiagram
+    participant U as User
+    participant P as PDF Books
+    participant E as Embedding (MiniLM)
+    participant DB as ChromaDB
+    participant R as Retriever
+    participant L as Groq LLaMA3-8B
+
+    U->>R: Ask Question
+    R->>DB: Query embeddings
+    DB-->>R: Return relevant chunks
+    R->>L: Send context + question
+    L-->>U: Return structured answer
 
 ---
 
