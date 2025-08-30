@@ -88,7 +88,6 @@ python rag_pipeline.py
 
 ## 🔮 Future Improvements
 - 📊 Dashboard for visualizing embeddings  
-- 🎤 Voice-based Q&A  
 - 🌐 API endpoints for integration  
 
 ---
