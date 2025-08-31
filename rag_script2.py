@@ -5,7 +5,7 @@ from groq import Groq
 
 # 1. Load Chroma DB
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
-collection = chroma_client.get_collection("books_embeddings")  # change name if needed
+collection = chroma_client.get_collection("Your_collection_name")  # change name if needed
 
 # 2. Initialize Retriever (search function)
 def retrieve_context(query, k=3):
@@ -68,3 +68,4 @@ if __name__ == "__main__":
     # 7. Return results
     print("\n📖 Retrieved Context:\n", context_text)
     print("\n🤖 LLM Answer:\n", answer)
+
