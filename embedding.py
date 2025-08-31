@@ -45,4 +45,5 @@ def process_folder(folder_path):
             embed_and_store(os.path.join(folder_path, file))
 
 # Run
-process_folder(r"D:\NCRT_class10_dataset\tokenized_texts_retake")
+process_folder("")
+
